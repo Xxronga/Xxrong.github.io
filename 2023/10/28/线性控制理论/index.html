@@ -1,0 +1,1051 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zhizhia">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="线性控制理论&#x2F;自动控制原理期末知识点总复习绪论知识点 经典控制理论 数学模型：线性定常高阶微分方程和传递函数 分析方法：时域，根轨迹法，频域法 单输入单输出 现代控制理论 数学模型：以一阶微分方程组成的差分方程组表示的动态方程 分析方法：精准的时域分析法 多输入多输出，非线性系统，时变系统  拉式变换  $F(s)&#x3D;\mathcal{L}(f(t))&#x3D;\int_0^{">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性控制理论">
+<meta property="og:url" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/index.html">
+<meta property="og:site_name" content="Xxronga的个人博客">
+<meta property="og:description" content="线性控制理论&#x2F;自动控制原理期末知识点总复习绪论知识点 经典控制理论 数学模型：线性定常高阶微分方程和传递函数 分析方法：时域，根轨迹法，频域法 单输入单输出 现代控制理论 数学模型：以一阶微分方程组成的差分方程组表示的动态方程 分析方法：精准的时域分析法 多输入多输出，非线性系统，时变系统  拉式变换  $F(s)&#x3D;\mathcal{L}(f(t))&#x3D;\int_0^{">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-c189f10dbab1b164af49bde1fdd3a390_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-766f4412dfedda32f92cb16ba3420dcd_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8aa3796f00e5216420609d33f0923c71_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-143ddc5b725523e83cd86d20c23c3de8_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-3a7ed11c878a54af7823549dabf5ebe5_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-a7dd3156a82b17b45bb1b93c82d901ab_1440w-16984808949627.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-d65dbccf57ade6c51662e44eb9a1c834_1440w-169848091420910.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6d1fcb3912ef1ab2f6e40c9a673fe006_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-115bf2391b72892fd0361b04cf19d5d2_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-86ae2ea76b58eb9f4b1e91ac4b3b3b40_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8ba671be8a73d1cc4a90b36b24c94be0_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-fca529c1ff490e7c9e666dd8689daada_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-cafef30060640bc580a46cbc24664b9f_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-3318d03d3004b80c46ffc7fa44147d6e_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-e19e298618a83777d31e9046ea9548c7_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8252fa4f996162c8a344f6d72810ffc8_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-d6df4831974f46f8576fa675e8437815_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-dc4cb6c091c4cd0dcc9a1fc7c00e7be6_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-0150ad9d185a06ca0e5c56bf183852fd_1440w-169848130261024.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-e43cb7607db9207b08c01f10a079b1b6_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-9e35fbe0c990a5e1efb97bd2c4824499_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ba490973c60d0e983b5c82b74bc6fd65_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-c61bc3d09bda2cec870173bdf08f7034_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6709e6a4b1bb15d627ac5c3da09d4d15_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ef10452f82d7cb5ec8762974743f5d92_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-7f8e587eaa416e5b16e1f5ac2c8cd071_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-03a8310cc796d36849f4f66b7c40f094_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-fedf3f415f624b541a3411f4f1bdfe83_1440w-169848154059935.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-23803831ca1e906735a74935a4e9ddac_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-4e4b17db132c6a49bb3063e1e32146bb_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-156ee7b67ef8d7a1774161fb0f11dc23_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-0dcb188d35990785b09304fbef58288a_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-4f4a8398b5c72ffbc0c07e78d8721145_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ba5b6b9b72bc32b4f72422474d69d82c_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6fe6875dc9d0d2a83c8733c17ae028ec_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-18fad039b85645d113804975b5a40bb9_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-d2f04017b0089bfd9e5fce62aa6707f4_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ab32aa2d2edb474a0d5463dedf796ec7_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-01116275e1b271e8228f2f3024bbb785_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6c5a23c9a866097b6c4c4d81e2b4c091_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-0965cf49adc191aef0379d469c313490_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-2952d5677577fd80937082999828ee91_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-9f5155d12e5f1d2b59a97c67ab1ab1c5_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-797adc7b91c99997d207e0ad3c768db7_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-bc9584d140831e93f8f2401502ba3783_1440w-169848188219254.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8f97c40b61a05d8986ccde4ee0d41fc0_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-51f5f6fb9f7593c7b52113492c1fa643_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6e69f4eb3157288101448e41114d8bfa_1440w-169848192266159.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-efe23bf656279b0796edaa3a3c97b0d8_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-39da705064d2c66d8e414616141020e8_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6bc220a1bc4a896b2d2493c0f7b46c65_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-cb7755e4d505c6b865b2a004279331fe_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-34381a8f9e9749f533cd78da4a37696a_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-5264c02d609d67687572618dc46fc435_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-b090b8fd5af5519c33beb3c82ec8ec93_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-f35a6f64be9d9bc1ef546ca0a2198ea8_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-e5592d8f1b8e8e18064cbae05a8b46f4_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-f1dca872799e2f30a654d07054090465_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-7142a7bad06430a3db04dca0ce05ec03_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-11c95d359be01d036c56d72bdf220a14_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-9841bc6db90f9cfcd3c3778ad03007a5_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-53871334aeebf3e27c977baf84dc4ade_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-283399e626cb07fa7de1348015d96367_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-36b5800a5c07d48e595e814cbd3cf6f3_1440w.png">
+<meta property="og:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-3eadf49c5590b51d912ba06a815b7f5a_1440w.png">
+<meta property="article:published_time" content="2023-10-28T10:56:27.062Z">
+<meta property="article:modified_time" content="2023-10-28T11:22:21.600Z">
+<meta property="article:author" content="Xxronga">
+<meta property="article:tag" content="mathematics">
+<meta property="article:tag" content="major subject">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-c189f10dbab1b164af49bde1fdd3a390_1440w.png">
+  
+  
+  
+  <title>线性控制理论 - Xxronga的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Hello</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/tree.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="线性控制理论"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-10-28 10:56" pubdate>
+          2023年10月28日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          34 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">线性控制理论</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="线性控制理论-自动控制原理期末知识点总复习"><a href="#线性控制理论-自动控制原理期末知识点总复习" class="headerlink" title="线性控制理论&#x2F;自动控制原理期末知识点总复习"></a>线性控制理论&#x2F;自动控制原理期末知识点总复习</h1><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li>经典控制理论</li>
+<li>数学模型：线性定常高阶微分方程和传递函数</li>
+<li>分析方法：时域，根轨迹法，频域法</li>
+<li>单输入单输出</li>
+<li>现代控制理论</li>
+<li>数学模型：以一阶微分方程组成的差分方程组表示的动态方程</li>
+<li>分析方法：精准的时域分析法</li>
+<li>多输入多输出，非线性系统，时变系统</li>
+</ul>
+<p><strong>拉式变换</strong></p>
+<ul>
+<li>$F(s)&#x3D;\mathcal{L}(f(t))&#x3D;\int_0^{\infty} f(t)e^{-st}dt $</li>
+<li>常见例子：</li>
+</ul>
+<p>$$<br>\mathcal{L}[1]&#x3D;\dfrac{1}{s}，\mathcal{L}[t]&#x3D;\dfrac{1}{s^2}，\mathcal{L}[e^{at}]&#x3D;\dfrac{1}{s-a} \ \mathcal{L}[sinwt]&#x3D;\dfrac{w}{s^2+w^2}，\mathcal{L}[coswt]&#x3D;\dfrac{s}{s^2+w^2}<br>$$</p>
+<ul>
+<li><p>基本性质：</p>
+<ol>
+<li><p>线性性质：$\mathcal{L}[af_1+bf_2]&#x3D;a\mathcal{L}[ f_1]+b\mathcal{L}[f_2]$</p>
+</li>
+<li><p>微分方程：</p>
+<p>$\mathcal{L}[\dfrac{df(t)}{dt}]&#x3D;sF(s)-f(0),\\mathcal{L}[\dfrac{d^nf(t)}{dt^n}]&#x3D;s^nF(s)-s^{n-1}f(0)-\cdots-f^{(n-1)}(0)$</p>
+</li>
+<li><p>积分定理：</p>
+<p>$\mathcal{L}[\int_0^{\infty}f(\eta)d\eta]&#x3D;\dfrac{F(s)}{s}\\mathcal{L}[\int_0^{\infty}\cdots \int_0^{\infty} f(\eta)d\eta\cdots d\eta]&#x3D;\dfrac{F(s)}{s^n}$</p>
+</li>
+<li><p>初值定理：$\lim\limits_{s\rightarrow \infty}sF(s)&#x3D;f(0^+)$</p>
+</li>
+<li><p>终值定理：$\lim\limits_{s\rightarrow 0}sF(s)&#x3D;f(+\infty)\$</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>&#x3D;&#x3D;<strong>求逆变换</strong>&#x3D;&#x3D;</p>
+<ol>
+<li>部分分式的方法：利用常见例子的逆变换的组合</li>
+<li>留数定理</li>
+</ol>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-c189f10dbab1b164af49bde1fdd3a390_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="⭐考点"><a href="#⭐考点" class="headerlink" title="⭐考点:"></a>⭐考点:</h3><ul>
+<li><p>求$F(s)&#x3D;\dfrac{s}{s^2+1}$的逆变换<br>$$<br>B(s)&#x3D;s^2+1,s_1&#x3D;j,s_2&#x3D;-j\ f(t)&#x3D;\dfrac{s}{2s}e^{st}|<em>{s&#x3D;j}+\dfrac{s}{2s}e^{st}|</em>{s&#x3D;-j}&#x3D;cost,(t&gt;0)<br>$$</p>
+</li>
+<li><p>求$F(s)&#x3D;\dfrac{1}{s(s-1)^2}$的逆变换<br>$$<br>B(s)&#x3D;s(s-1)^2,s&#x3D;0,单零点,s&#x3D;1, (2\text{阶})\<br>\begin{split}<br>f(t)&#x3D;&amp;\dfrac{1}{3s^2-4s+1}e^{st}|<em>{s&#x3D;0}+\lim\limits</em>{s\rightarrow 1}\dfrac{d}{ds}\left[(s-1)^2\dfrac{1}{s(s-1)^2}e^{st}\right]_{s&#x3D;-j}\&#x3D;&amp;1+e^t(t-1),(t&gt;0)<br>\end{split}<br>$$</p>
+</li>
+<li><p>求$F(s)&#x3D;\dfrac{1}{s^2(s+1)}$的逆变换<br>$$<br> F(s)&#x3D;\dfrac{-1}{s}+\dfrac{1}{s^2}+\dfrac{1}{s+1}\ f(t)&#x3D;\mathcal{L}^{-1}[\dfrac{1}{s^2(s+1)}]&#x3D;-1+t+e^{-t}<br>$$</p>
+</li>
+</ul>
+<h2 id="动态系统的状态空间描述"><a href="#动态系统的状态空间描述" class="headerlink" title="动态系统的状态空间描述"></a>动态系统的状态空间描述</h2><h3 id="系统模型的建立"><a href="#系统模型的建立" class="headerlink" title="系统模型的建立"></a>系统模型的建立</h3><ul>
+<li>基本概念</li>
+</ul>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-766f4412dfedda32f92cb16ba3420dcd_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ul>
+<li>两类动态模型的定义</li>
+</ul>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8aa3796f00e5216420609d33f0923c71_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ul>
+<li>传递函数</li>
+</ul>
+<p><strong>零初始条件</strong>下$G(s)&#x3D;\dfrac{F(y(t))}{F(u(t))}&#x3D;\dfrac{y(s)}{u(s)}$  </p>
+<p>零初始条件：$t\leq0$时，输入$u(t)$，输出$y(t)$，它们各阶导$&#x3D;0$。</p>
+<ol>
+<li>单输入单输出的<strong>传递函数</strong></li>
+</ol>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-143ddc5b725523e83cd86d20c23c3de8_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ol start="2">
+<li>多输入多输出的传递函数矩阵</li>
+</ol>
+<p> <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-3a7ed11c878a54af7823549dabf5ebe5_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>$$<br>\lim\limits_{s\rightarrow \infty}G(s)&#x3D;D&#x3D;\begin{cases}\neq 0, ,G(s)真\&#x3D;0,,G(s)严格真\end{cases}<br>$$</p>
+<ul>
+<li>动态系统的分类</li>
+</ul>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-a7dd3156a82b17b45bb1b93c82d901ab_1440w-16984808949627.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="⭐单输入单输出的I-O模型与SS模型"><a href="#⭐单输入单输出的I-O模型与SS模型" class="headerlink" title="⭐单输入单输出的I&#x2F;O模型与SS模型"></a>⭐单输入单输出的I&#x2F;O模型与SS模型</h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-d65dbccf57ade6c51662e44eb9a1c834_1440w-169848091420910.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="⭐多输入多输出的I-O模型与TF模型"><a href="#⭐多输入多输出的I-O模型与TF模型" class="headerlink" title="⭐多输入多输出的I&#x2F;O模型与TF模型"></a>⭐多输入多输出的I&#x2F;O模型与TF模型</h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6d1fcb3912ef1ab2f6e40c9a673fe006_1440w.png" srcset="/img/loading.gif" lazyload alt="img"><br>$$<br>\begin{split}G(s)&#x3D;&amp;\dfrac{P(s)}{d(s)}&#x3D;\dfrac{1}{d(s)}(P_{k-1}s^{k-1}+\cdots+P_1s+P_0),P_m是q\times p常矩阵\ d(s)&#x3D;&amp;s^k+\alpha_{k-1}s^{k-1}+\cdots+\alpha_0\end{split}<br>$$</p>
+<h3 id="线性系统规范型状态方程"><a href="#线性系统规范型状态方程" class="headerlink" title="线性系统规范型状态方程"></a>线性系统规范型状态方程</h3><ul>
+<li><p>对角规范型</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-115bf2391b72892fd0361b04cf19d5d2_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>Jordan规范型</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-86ae2ea76b58eb9f4b1e91ac4b3b3b40_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h3 id="代数等价线性系统的不变性"><a href="#代数等价线性系统的不变性" class="headerlink" title="代数等价线性系统的不变性"></a>代数等价线性系统的不变性</h3><ul>
+<li><p>状态空间的坐标变换【系数矩阵的转置】</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8ba671be8a73d1cc4a90b36b24c94be0_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>不变性	</p>
+<p>$\bar{x}&#x3D;Px$</p>
+<p>$\overline{A}&#x3D;PAP^{-1},\overline{B}&#x3D;PB,\overline{C}&#x3D;CP^{-1},\overline{D}&#x3D;D$</p>
+<p>特征值相同， $G(s)$不变</p>
+</li>
+</ul>
+<h3 id="组合系统的状态空间模型和传递函数"><a href="#组合系统的状态空间模型和传递函数" class="headerlink" title="组合系统的状态空间模型和传递函数"></a>组合系统的状态空间模型和传递函数</h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-fca529c1ff490e7c9e666dd8689daada_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="考点："><a href="#考点：" class="headerlink" title="考点："></a>考点：</h3><ul>
+<li><em>系统方框图</em></li>
+</ul>
+<ol>
+<li><p>化方块图为规范化方框图（原则：当且仅当各组成环节的传递函数均为一阶惯性环节 1&#x2F;(s+si) 和比例放大环节 k ）</p>
+</li>
+<li><p>指定状态向量组（原则是当且仅当一阶惯性环节的输出有资格选为状态变量）</p>
+</li>
+</ol>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-cafef30060640bc580a46cbc24664b9f_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ol start="3">
+<li>列变量间关系方程（围绕一阶惯性环节和求和环节）</li>
+</ol>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-3318d03d3004b80c46ffc7fa44147d6e_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ol start="4">
+<li>导出变化域状态变量方程和输出变量方程</li>
+</ol>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-e19e298618a83777d31e9046ea9548c7_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ol start="5">
+<li>导出状态空间描述（$\dfrac{dx_i}{dt}替代sx_i,用时域变量代替Laplace变量$  ）</li>
+</ol>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8252fa4f996162c8a344f6d72810ffc8_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-d6df4831974f46f8576fa675e8437815_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>简便方法：1&#x2F;s等价于积分，进$\dot{x}$出$x$  </p>
+<ul>
+<li><p><em>考点二：模型转换</em></p>
+</li>
+<li><p><em>考点三：规范型</em></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-dc4cb6c091c4cd0dcc9a1fc7c00e7be6_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-0150ad9d185a06ca0e5c56bf183852fd_1440w-169848130261024.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h2 id="线性系统的定量分析"><a href="#线性系统的定量分析" class="headerlink" title="线性系统的定量分析"></a>线性系统的定量分析</h2><h3 id="单变量的时域分析"><a href="#单变量的时域分析" class="headerlink" title="单变量的时域分析"></a>单变量的时域分析</h3><ul>
+<li><p>典型输入信号</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-e43cb7607db9207b08c01f10a079b1b6_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>动态性能与稳态指标</p>
+</li>
+</ul>
+<ol>
+<li><p>单位阶跃响应：系统在单位阶跃作用下的时间响应</p>
+</li>
+<li><p>动态性能指标</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-9e35fbe0c990a5e1efb97bd2c4824499_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>稳态性能指标</p>
+<p>稳态误差：$e(t)&#x3D;e_{st}(t)+e_{ss}(t),,(e_{st}(t)$调节误差趋于0)</p>
+</li>
+</ol>
+<p><strong>输入误差Vs输出误差</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ba490973c60d0e983b5c82b74bc6fd65_1440w.png" srcset="/img/loading.gif" lazyload alt="img"> </p>
+<p>$$<br>e_{ss}&#x3D;\lim\limits_{t\rightarrow \infty}\mathcal{L}^{-1}(E(s))&#x3D;\lim\limits_{t\rightarrow \infty}\mathcal{L}^{-1}(R (s)&#x2F;(1+G(s)H(s))<br>$$<br><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-c61bc3d09bda2cec870173bdf08f7034_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>解析性：对于多项式而言，分母不为0</p>
+<ul>
+<li>系统类型及误差特性</li>
+</ul>
+<p>1.线性定常开环系统的传递函数</p>
+<img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6709e6a4b1bb15d627ac5c3da09d4d15_1440w.png" srcset="/img/loading.gif" lazyload alt="img" style="zoom:150%;"> 
+$$
+G(s)H(s)=\dfrac{k(1+\tau_1s)\cdots(1+\tau_ns)}{s^v(1+\tau_1s)\cdots(1+\tau_{n-v}s)}=\dfrac{kG_0H_0}{s^v}
+$$
+
+<p>$$<br>e_{ss}&#x3D;\lim\limits_{s\rightarrow 0}sE(s)&#x3D;\lim\limits_{s\rightarrow 0}\dfrac{sR(s)}{1+GH}&#x3D;\lim\limits_{s\rightarrow 0}\dfrac{s^{v+1}R(s)}{s^v+kG_0(s)H_0(s)}<br>$$</p>
+<p><strong>静差：系统在阶跃输入作用下的稳态误差</strong></p>
+<p>2.含外部干扰的单位反馈系统</p>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ef10452f82d7cb5ec8762974743f5d92_1440w.png" srcset="/img/loading.gif" lazyload alt="img"> </p>
+<p>$$<br>e_{ss}&#x3D;\lim\limits_{s\rightarrow 0}\dfrac{s^{v+1}R(s)}{s^v+kG_0(s)H_0(s)}<br>$$</p>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-7f8e587eaa416e5b16e1f5ac2c8cd071_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>  $\mathcal{L}(t^n)&#x3D;n!\mathcal{L}(\int_0^t\cdots\int_0^t 1dt\cdots dt)&#x3D;n!\dfrac{\mathcal{L}(1)}{s^n}&#x3D;n!\dfrac{1}{s^{n+1}}$</p>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-03a8310cc796d36849f4f66b7c40f094_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>例题：</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-fedf3f415f624b541a3411f4f1bdfe83_1440w-169848154059935.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="频率响应分析法"><a href="#频率响应分析法" class="headerlink" title="频率响应分析法"></a>频率响应分析法</h3><ul>
+<li><p>BIBO稳定：初始条件为0的单变量LTI系统，若对有界的输入，其输出有界</p>
+</li>
+<li><p>引理：</p>
+<p> $初始条件为0的单变量LTI系统BIBO稳定\ \Leftrightarrow g(s)所有极点具有负实部\ \Leftrightarrow 单位响应函数h(t)绝对可积，\exists k&gt;0 ,\int_0^{\infty}|h(t)|dt&lt;k$</p>
+</li>
+</ul>
+<h3 id="线性系统状态方程解的结构与性质"><a href="#线性系统状态方程解的结构与性质" class="headerlink" title="线性系统状态方程解的结构与性质"></a>线性系统状态方程解的结构与性质</h3><ul>
+<li><p>解的存在唯一性</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-23803831ca1e906735a74935a4e9ddac_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>解的结构</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-4e4b17db132c6a49bb3063e1e32146bb_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>零输入响应</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-156ee7b67ef8d7a1774161fb0f11dc23_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-0dcb188d35990785b09304fbef58288a_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>零状态响应</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-4f4a8398b5c72ffbc0c07e78d8721145_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h3 id="线性定常系统的状态转移矩阵和脉冲响应矩阵"><a href="#线性定常系统的状态转移矩阵和脉冲响应矩阵" class="headerlink" title="线性定常系统的状态转移矩阵和脉冲响应矩阵"></a><strong>线性定常系统的状态转移矩阵和脉冲响应矩阵</strong></h3><ul>
+<li><p><strong>状态转移矩阵</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ba5b6b9b72bc32b4f72422474d69d82c_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p><strong>脉冲响应矩阵</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6fe6875dc9d0d2a83c8733c17ae028ec_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p><strong>两者关系</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-18fad039b85645d113804975b5a40bb9_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h2 id="线性系统的能控性和能观测性"><a href="#线性系统的能控性和能观测性" class="headerlink" title="线性系统的能控性和能观测性"></a>线性系统的能控性和能观测性</h2><h3 id="能控性定义和判据"><a href="#能控性定义和判据" class="headerlink" title="能控性定义和判据"></a>能控性定义和判据</h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-d2f04017b0089bfd9e5fce62aa6707f4_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-ab32aa2d2edb474a0d5463dedf796ec7_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="能控性常数和指标"><a href="#能控性常数和指标" class="headerlink" title="能控性常数和指标"></a>能控性常数和指标</h2><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-01116275e1b271e8228f2f3024bbb785_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="能观测性定义及其判据"><a href="#能观测性定义及其判据" class="headerlink" title="能观测性定义及其判据"></a><strong>能观测性定义及其判据</strong></h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6c5a23c9a866097b6c4c4d81e2b4c091_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-0965cf49adc191aef0379d469c313490_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-2952d5677577fd80937082999828ee91_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="对偶性原理"><a href="#对偶性原理" class="headerlink" title="对偶性原理"></a><strong>对偶性原理</strong></h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-9f5155d12e5f1d2b59a97c67ab1ab1c5_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="能控性规范型和能观测规范型"><a href="#能控性规范型和能观测规范型" class="headerlink" title="能控性规范型和能观测规范型"></a><strong>能控性规范型和能观测规范型</strong></h3><p><strong>能控性规范型</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-797adc7b91c99997d207e0ad3c768db7_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>能观测规范型</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-bc9584d140831e93f8f2401502ba3783_1440w-169848188219254.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<blockquote>
+<p>还有MIMO的规范型</p>
+</blockquote>
+<h3 id="线性系统的结构分解"><a href="#线性系统的结构分解" class="headerlink" title="线性系统的结构分解"></a><strong>线性系统的结构分解</strong></h3><p><strong>能控性分解</strong></p>
+<blockquote>
+<p><strong>一部分来自$Q_c$ 一部分来自$R^n$</strong></p>
+</blockquote>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-8f97c40b61a05d8986ccde4ee0d41fc0_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>能观测性分解</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-51f5f6fb9f7593c7b52113492c1fa643_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>规范分解</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6e69f4eb3157288101448e41114d8bfa_1440w-169848192266159.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="动态系统的稳定性"><a href="#动态系统的稳定性" class="headerlink" title="动态系统的稳定性"></a>动态系统的稳定性</h2><h3 id="外部稳定性和内部稳定性"><a href="#外部稳定性和内部稳定性" class="headerlink" title="外部稳定性和内部稳定性"></a><strong>外部稳定性和内部稳定性</strong></h3><ul>
+<li><p><strong>BIBO&#x2F;外部稳定</strong></p>
+</li>
+<li><p><strong>内部稳定&#x2F;内部稳定</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-efe23bf656279b0796edaa3a3c97b0d8_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<p><strong>Lyapunov 稳定性</strong></p>
+<ul>
+<li><p><strong>Lyapunov第二方法</strong></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-39da705064d2c66d8e414616141020e8_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<blockquote>
+<p>定常系统：</p>
+</blockquote>
+<p>  <img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-6bc220a1bc4a896b2d2493c0f7b46c65_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性系统稳定性判据"><a href="#线性系统稳定性判据" class="headerlink" title="线性系统稳定性判据"></a>线性系统稳定性判据</h3><ul>
+<li><p>特征值判据</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-cb7755e4d505c6b865b2a004279331fe_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>Lyapunov判据</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-34381a8f9e9749f533cd78da4a37696a_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h2 id="线性反馈系统的时间域综合"><a href="#线性反馈系统的时间域综合" class="headerlink" title="线性反馈系统的时间域综合"></a>线性反馈系统的时间域综合</h2><h3 id="综合问题的提法、类型和性质"><a href="#综合问题的提法、类型和性质" class="headerlink" title="综合问题的提法、类型和性质"></a>综合问题的提法、类型和性质</h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-5264c02d609d67687572618dc46fc435_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ul>
+<li><p>类型</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-b090b8fd5af5519c33beb3c82ec8ec93_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>状态反馈和输出反馈</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-f35a6f64be9d9bc1ef546ca0a2198ea8_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h3 id="极点配置"><a href="#极点配置" class="headerlink" title="极点配置"></a>极点配置</h3><ul>
+<li><p>问题</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-e5592d8f1b8e8e18064cbae05a8b46f4_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>条件</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-f1dca872799e2f30a654d07054090465_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>极点配置算法</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-7142a7bad06430a3db04dca0ce05ec03_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-11c95d359be01d036c56d72bdf220a14_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>可正定条件</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-9841bc6db90f9cfcd3c3778ad03007a5_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<h3 id="状态重构问题和状态观测器"><a href="#状态重构问题和状态观测器" class="headerlink" title="状态重构问题和状态观测器"></a>状态重构问题和状态观测器</h3><p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-53871334aeebf3e27c977baf84dc4ade_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>观测器按功能分为状态观测器和函数观测器</p>
+<p>观测器按结构分为全维观测器和降维观测器</p>
+<ul>
+<li><p>全维观测器</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-283399e626cb07fa7de1348015d96367_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+<li><p>降维观测器</p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-36b5800a5c07d48e595e814cbd3cf6f3_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/10/28/%E7%BA%BF%E6%80%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/v2-3eadf49c5590b51d912ba06a815b7f5a_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<blockquote>
+<p>参考资料：《线性系统理论（第二版》郑大钟 清华大学出版社</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="category-chain-item">学习资料</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%A4%A7%E4%B8%89%E4%B8%8B%E4%B8%93%E4%B8%9A%E8%AF%BE/" class="category-chain-item">大三下专业课</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/mathematics/" class="print-no-link">#mathematics</a>
+      
+        <a href="/tags/major-subject/" class="print-no-link">#major subject</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>线性控制理论</div>
+      <div>http://example.com/2023/10/28/线性控制理论/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zhizhia</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年10月28日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/10/28/article-title/" title="我的第一篇文章呀！">
+                        <span class="hidden-mobile">我的第一篇文章呀！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
