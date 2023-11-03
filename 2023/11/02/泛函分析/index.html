@@ -1,0 +1,1001 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zhizhia">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="十遍实变 泛函心寒              度量空间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛函分析">
+<meta property="og:url" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Xxronga的个人博客">
+<meta property="og:description" content="十遍实变 泛函心寒              度量空间">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-1b32e2208f1af2722a9ff6eca04c2433_b.jpg">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-bcb95f7adecd93604beebfc784723da0_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-55f9b5ab110b8603fa1bb7bd42cdf074_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-454e8cc078fb16086ce7628ac75a89f1_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-0793ac3dd065ca7876fe2478e621ca7f_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-cc245756dbc08c5de516c30de6aea815_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-520325fbf0ac50b7ba7338d423d9489f_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-285c5de76449197b97b1d188594f0765_1440w.jpg">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-dc93c26bd6b2689feee347e3e221223b_1440w-169893739957454.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-03c1ce01393c465a1d6b3ce6b18fb264_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-cdc9368fb3282cc1952071757e9b19d1_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-fe0db10452c9ee6c198bf235454c1954_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-07ef6c659278e77b608909d3663b43e3_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-433b88f881e2cecedb575209a684147a_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-1256d38f66ba1eb5dbb6a176133cbf9a_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-0262f5c2be38547f7b0abcf6c4beb0f4_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-5abc22fc85cbd1b8128b03919c9f2849_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-6d9f581fb4c4689238251fdde606d3cb_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-99a4b6c533add623cda6ace3532dde32_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f566e21eb6b918f4e7b66216fa87c86b_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-4eb272b29c0b18f1ede0db55b4be1864_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-11360fe306aeb00d33ce45d28945342b_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-7419c2b8fbdd954db4f14e83c7a376a5_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c34cd910fc0faa5a178a2ab702521ed9_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-e5c06329ef35bffc9c2c3c55a35d0fee_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-a35f46bef4ea912b95cec812f820c3e7_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c84c2b1b7efbe5bda5bd88e8eefc72c2_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-a5117709a5f9e0523dc87e5befd3cc45_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c84c2b1b7efbe5bda5bd88e8eefc72c2_1440w-16989345378491.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-ad81e05a9b1bc6b50e97d88b63e43096_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-5da4104109990609d6158c1c03ee006f_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f158a575b48fe32ffb80808330a1a3f0_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-8d27303e14726151def5fbe3993b6a1e_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-7bb285bb94d0b3e53e1d984de747930e_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-dc477b1958f5cd89bae18867027018ad_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-d3d258a15e2148da660c8eab7e4e616e_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f5fbd84d848c71b35892c26aa1a07994_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-10237668b0ea457bd378504375c0321c_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-eb3560a75ddfc21ed6b64a4eeef514ef_1440w.jpeg">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-00969702b8ea1c488f6c420dc0e7b927_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-be9656e1999c53787352eb9c1f4402ca_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-81bd992362374e8353c0ffe60c3cc4be_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-38e00ad885c93e7a131900215b6afd51_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-06573f4a69074468a621d55426a354b0_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-ad83cbff38b44f54f7c368540d56d15a_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-351b996a7c0b96a2472396b5cc4d9a5c_1440w.jpeg">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-9ece3776d4893acdbbb3adaf49275781_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f24e09ea828ed2fa468f63d97fcc73b2_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c14079fa57bc60ea0401fe87ee353565_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-463f039f6cafabc712a312b393fea755_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-874bdd1873aeaf9000233c1103146287_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-3038f73aede28c77e5b320f61a3addd4_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-eee4fbddbe944c9fbe8e07a895c0bea4_1440w.png">
+<meta property="og:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-73defcfa0120371d8c6c97efcdb0b11e_b.jpg">
+<meta property="article:published_time" content="2023-11-02T14:15:30.138Z">
+<meta property="article:modified_time" content="2023-11-03T03:54:14.311Z">
+<meta property="article:author" content="Xxronga">
+<meta property="article:tag" content="mathematics">
+<meta property="article:tag" content="major subject">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-1b32e2208f1af2722a9ff6eca04c2433_b.jpg">
+  
+  
+  
+  <title>泛函分析 - Xxronga的个人博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Hello</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/tree.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="泛函分析"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-02 14:15" pubdate>
+          2023年11月2日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          44 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">泛函分析</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <div class="note note-success">
+            <p>十遍实变 泛函心寒</p>
+          </div>
+
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-1b32e2208f1af2722a9ff6eca04c2433_b.jpg" srcset="/img/loading.gif" lazyload alt="小狗自闭"></p>
+<h1 id="度量空间"><a href="#度量空间" class="headerlink" title="度量空间"></a><strong>度量空间</strong></h1><span id="more"></span>
+
+<h2 id="度量空间的定义与举例"><a href="#度量空间的定义与举例" class="headerlink" title="度量空间的定义与举例"></a><strong>度量空间的定义与举例</strong></h2><ul>
+<li><p>度量空间  设$X $为一非空集合. 若存在二元映射 $d:X×X→R$, 使得$∀x,y,z∈X$， 满足以下三个条件： </p>
+<p>1)非负性：且当且仅当$d(x,y)≥0$, 且$d(x,y)&#x3D;0$当且仅当$x&#x3D;y $</p>
+<p>2)对称性: $d(x,y)&#x3D;d(y,x)$ </p>
+<p>3)三角不等式: $d(x,y)≤d(x,z)+d(z,y)$ </p>
+<p>则称$d$为$X$上的一个距离函数，称$d(x,y)$为$x$和$y$两点间的距离  </p>
+</li>
+<li><p>example： </p>
+<p>欧式空间$R^n: d(x,y)&#x3D;∑_{i&#x3D;1}^n(x_i−y_i)^2$ </p>
+<p>Schwarz表达式：$\sum \limits_{i&#x3D;1}^na_ib_i\leq(\sum\limits_{i&#x3D;1}^na_i^2)^{\frac{1}{2}}(\sum\limits_{i&#x3D;1}^nb_i^2)^{\frac{1}{2}}$</p>
+</li>
+<li><p>进一步有Holder不等式$\sum \limits_{i&#x3D;1}^n|a_ib_i|\leq(\sum\limits_{i&#x3D;1}^n|a_i|^p)^{\frac{1}{p}}(\sum\limits_{i&#x3D;1}^n|b_i^q|)^{\frac{1}{q}}$，$\int _{i&#x3D;1}^n|f(x)g(x)|dx\leq(\int _{i&#x3D;1}^n|f(x)|^pdx)^{\frac{1}{p}}(\int _{i&#x3D;1}^n|g(x)^q|dx)^{\frac{1}{q}}$其中且$p,q&gt;1$且$\frac{1}{p}+\frac{1}{q}&#x3D;1$</p>
+</li>
+<li><p>Minkowski不等式：$\left[\sum \limits_{i&#x3D;1}^n(a_i+b_i)^2\right]^{\frac{1}{2}}\leq(\sum\limits_{i&#x3D;1}^na_i^2)^{\frac{1}{2}}+(\sum\limits_{i&#x3D;1}^nb_i^2)^{\frac{1}{2}}$，$\left[\sum \limits_{i&#x3D;1}^n(a_i+b_i)^k\right]^{\frac{1}{k}}\leq(\sum\limits_{i&#x3D;1}^na_i^k)^{\frac{1}{k}}+(\sum\limits_{i&#x3D;1}^nb_i^k)^{\frac{1}{k}}$，$\left[\int_{E}|f(x)+g(x)|^kdx\right]^{\frac{1}{k}}\leq(\int_{E}|f(x)|^kdx)^{\frac{1}{k}}+(\int_{E}|g(x)|^kdx)^{\frac{1}{k}},k\geq 1$</p>
+</li>
+<li><p>离散度量空间$X$：设$X$为非空集合，$∀x,y∈X$, 定义距离<br>$$<br>d_0(x,y)&#x3D;\begin{cases}0,x&#x3D;y\1,x\neq y\end{cases}<br>$$</p>
+</li>
+<li><p>连续函数空间C[a,b]: $d(f,g)&#x3D;\max\limits_{t\in[a,b]}|f(t)-g(t)|$</p>
+</li>
+<li><p>有界数列空间$l_∞$: 记$l^{\infty}&#x3D;{x&#x3D;(x_1,x_2,\cdots,x_n,\cdots)&#x3D;(x_i)|\sup\limits_{i\geq 1}{|x_i|}&lt;\infty}$，$d(x,y)&#x3D;\sup\limits_{i\geq 1}|x_i-y_i|$</p>
+</li>
+<li><p>p次幂可和的数列空间$l_p$: 记其中$l^{p}&#x3D;{x&#x3D;(x_1,x_2,\cdots,x_n,\cdots)&#x3D;(x_i)|\sup\limits_{i\geq 1}{|x_i|^p}&lt;\infty},其中1\leq p&lt; \infty$，$d(x,y)&#x3D;\left(\sum\limits_{i&#x3D; 1}^{\infty}|x_i-y_i|^p\right)^{\frac{1}{p}}$</p>
+</li>
+</ul>
+<h2 id="度量空间的拓扑性质"><a href="#度量空间的拓扑性质" class="headerlink" title="度量空间的拓扑性质"></a><strong>度量空间的拓扑性质</strong></h2><ul>
+<li><p>领域 $O(x_0,\delta)&#x3D;{x|d(x,x_0)&lt;\delta,x\in X}$</p>
+</li>
+<li><p>内点、开集与闭集 </p>
+</li>
+<li><p>内点：  $x_0\in G\subset X,若\exists O(x_0,\delta)\subset G,则称x_0为G的内点$</p>
+</li>
+<li><p>开集的性质</p>
+</li>
+<li><p>闭集的性质</p>
+</li>
+<li><p>聚点与闭包 </p>
+<p>聚点：$x_0的任意\delta 领域O(x_0,\delta)含有A异于x_0的点 $</p>
+<p>$导集A’：A的全体聚点所构成的集合$</p>
+<p>闭包：$\overline{A}&#x3D;A\cup A’$</p>
+<p>设$ (X,d)  $是度量空间，$ x_0\in X,A\subset X$ </p>
+<ol>
+<li>$x_0\in A’\iff  \exists 元素互不相同点列{x_n}\subset A,使\lim\limits_{n\rightarrow \infty}  x_n&#x3D;x_0$</li>
+<li>$\overline{A}$是闭集</li>
+<li>$A$是闭集$\iff A&#x3D;\overline{A}$</li>
+<li>若 $\exists $闭集 $F\subset X$,使得 $A\subset F$, 则$A\subset \overline{A}\subset F$</li>
+</ol>
+</li>
+<li><p>拓扑空间 </p>
+<p>设$X$是非空集合，如果 $\tau$ 是$X$的一个子集族，且满足</p>
+<ol>
+<li>$\oslash,X\in \tau$</li>
+<li>$\tau 的任意多个集合的并仍属于 \tau$</li>
+<li>$\tau$的任意两个集合的交仍属于$\tau$则称子集族 $ \tau $为 $X$ 的拓扑， $(X,\tau)$ 为一个拓扑空间,   $\tau$内的集合为拓扑空间的开集</li>
+</ol>
+</li>
+<li><p>领域和闭集</p>
+<p>领域：$(X,\tau),x\in X$, $U$是$X$的子集族,若$\exists G\in \tau$,使$x\in G\subset U $</p>
+<p>开集：  $U$是开集当且仅当$U$是它的每一点的领域</p>
+</li>
+<li><p>离散拓扑空间：离散度量空间的任意非空子集既是开集又是闭集 </p>
+</li>
+<li><p>闭集的性质</p>
+<p>Hausdorff空间：设$X$是一个拓扑空间，如果$X$中任意两个不同的点都有不相交的领域，则称$X$为Hausdorff空间</p>
+</li>
+</ul>
+<blockquote>
+<p><em>度量空间$(X,d)$诱导的拓扑空间是Hausdorff空间</em></p>
+</blockquote>
+<h2 id="度量空间中的极限与连续"><a href="#度量空间中的极限与连续" class="headerlink" title="度量空间中的极限与连续"></a><strong>度量空间中的极限与连续</strong></h2><ul>
+<li><p>点列的极限</p>
+<p>极限的性质：<br>1.若点列$ {x_n}$收敛，则其极限唯一 </p>
+<p>2.若点列$  x_n\rightarrow x_0$，则${x_n}$的任何子列$x_{n_k}\rightarrow x_0 $</p>
+<p>3.收敛子列有界    </p>
+</li>
+<li><p>子空间与集合的直径</p>
+<p>$·d(x,A)&#x3D;\inf\limits_{y\in A}{d(x,y)}$<br>·集合的直径$ diaA&#x3D;\sup\limits_{x,y\in A}{d(x,y)} $<br>(有限集：$diaA$为有限值)</p>
+</li>
+<li><p>连续与一致连续</p>
+<p>连续： 关于$x_0\in X$,如果$\forall \epsilon &gt;0,\exists \delta&gt;0$, 当$x\in X$且$d(x,x_0)&lt;\delta $有$\rho(f(x),f(x_0))&lt;\epsilon$</p>
+<p>一致连续 ： $\forall \epsilon &gt;0,\exists \delta&gt;0$, $\forall x,y\in X$且$d(x,y)&lt;\delta $有$\rho(f(x),f(y))&lt;\epsilon$</p>
+</li>
+<li><p>连续的等价条件</p>
+<ol>
+<li>任一点点连续</li>
+<li>$ \forall O(f(x_0),\epsilon ),\exists O(x_0,\delta)$,使$f(O(x_0,\delta))\subset O(f(x_0),\epsilon )$</li>
+<li>连续点列映成连续点列</li>
+<li>开集的原像是开集</li>
+</ol>
+</li>
+</ul>
+<h2 id="度量空间的可分性"><a href="#度量空间的可分性" class="headerlink" title="度量空间的可分性"></a><strong>度量空间的可分性</strong></h2><ul>
+<li>稠密</li>
+<li>稠密集的传递性</li>
+<li>可分的度量空间 </li>
+<li>证明可分</li>
+<li>可分的子空间</li>
+</ul>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-bcb95f7adecd93604beebfc784723da0_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-55f9b5ab110b8603fa1bb7bd42cdf074_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="度量空间的完备性"><a href="#度量空间的完备性" class="headerlink" title="度量空间的完备性"></a><strong>度量空间的完备性</strong></h2><ul>
+<li>基本列</li>
+<li>性质</li>
+<li>完备的度量空间</li>
+</ul>
+<blockquote>
+<p> 设$(X,d)$是度量空间，$M⊂X$, 若$M$中的任何基本列都收敛, 且收敛点属于$M$，则称$M$是度量空间$X$的完备集.若$X$是完备集，则称$X$是完备的度量空间.</p>
+</blockquote>
+<ul>
+<li>闭球套定理(类似实数完备集的区间套) </li>
+<li>同构映射与同构空间 </li>
+<li>完备化定理</li>
+</ul>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-454e8cc078fb16086ce7628ac75a89f1_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-0793ac3dd065ca7876fe2478e621ca7f_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="度量空间的紧集"><a href="#度量空间的紧集" class="headerlink" title="度量空间的紧集"></a>度量空间的紧集</h2><ul>
+<li>列紧集、紧集与紧空间</li>
+</ul>
+<blockquote>
+<ol>
+<li>设是度量空间，$A\subset X$，如果A中任何点列都有收敛于的子列，则称为列紧集  </li>
+<li>紧集&#x3D;列紧集+闭集 </li>
+<li>本身是列紧集(必是闭集)则称为紧空间</li>
+</ol>
+</blockquote>
+<ul>
+<li>$设(X,d)是度量空间，A⊂X，则A是紧集当且仅当∀x_n⊂A，存在子列x_{n_k}收敛且lim_{k→∞}x_{n_k}&#x3D;x_0∈A$</li>
+<li>设$(X,d)是度量空间，A⊂X$，下列命题成立：</li>
+</ul>
+<blockquote>
+<ul>
+<li>任何有限集必是紧集. </li>
+<li>列紧集的子集是列紧集 </li>
+<li>任何多个列紧集的交是列紧集；有限多个列紧集的并是列紧集 </li>
+<li>列紧集必是有界集，反之不真 </li>
+<li>$A$是$X$的列紧集当且仅当它的闭包$\bar{A}$是紧集</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>$ 设X为紧空间，A⊂X，则$</p>
+<p>1)紧空间是有界空间 </p>
+<p>2)紧空间是完备的度量空间 </p>
+<p>3)A是紧集当且仅当A是闭集</p>
+</li>
+<li><p>列紧集与紧集在$R^n$的特性：<br> 设$A$是$n$维欧氏空间$R^n$的一个子集，那么<br> 1)A是列紧集当且仅当A是有界集<br> 2)A是紧集当且仅当A是有界闭集</p>
+</li>
+<li><p>连续映射将紧集映射为紧集：<br>$设f是从度量空间(X,d)到(Y,ρ)上的连续映射，A是X中的紧集，那么f(A)是Y中的紧集$</p>
+<ul>
+<li><strong>最值定理</strong>：设是度量空间中的紧集，是定义在上的实值连续函数(这里的映射也称为泛函)，即, 那么在上能取到最大值与最小值</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-cc245756dbc08c5de516c30de6aea815_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-520325fbf0ac50b7ba7338d423d9489f_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="度量空间中的全有界集"><a href="#度量空间中的全有界集" class="headerlink" title="度量空间中的全有界集"></a>度量空间中的全有界集</h2><ul>
+<li><p>网：$设X是度量空间，A,B\subset X. 给定\epsilon&gt;0, 如果对于B中任何点x, 必存在A中点x’，使得d(x,x’)&lt;\epsilon,  则称A是B的一个网，即B\subset \cup_{x\in A}O(x,\epsilon). $</p>
+</li>
+<li><p>全有界集：</p>
+<p>$设X是度量空间，A⊂X. 如果对于任给的ϵ&gt;0, A总存在<strong>有限的</strong>ϵ<strong>网</strong>, 则称A是B的一个全有界集. $</p>
+<p>$设X是度量空间，A⊂X，如果A是全有界集，则 1)A是有界集 2)A是可分集$</p>
+<p>$全有界集的充要条件：设X是度量空间，A⊂X，则A是全有界集当且仅当A中的任何点列必有基本子列 $</p>
+</li>
+<li><p><strong>Hausdorff定理</strong>：$设X$是度量空间，$A⊂X$. 下列结论成立： 1)若$A$是列紧集，则$A$是全有界集 2)若$X$是完备的度量空间，则$A$是列紧集当且仅当$A$是全有界集</p>
+</li>
+</ul>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-285c5de76449197b97b1d188594f0765_1440w.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ul>
+<li><p>$设X$是度量空间，$A$是$X$的紧子集. 则$A$的任何子集均是有界集，也是可分集 </p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-dc93c26bd6b2689feee347e3e221223b_1440w-169893739957454.png" srcset="/img/loading.gif" lazyload alt="img"><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-03c1ce01393c465a1d6b3ce6b18fb264_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+</li>
+</ul>
+<blockquote>
+<p><em>注意列紧集 全有界集 可分集的定义和子列的性质都有或多或少的联系</em></p>
+</blockquote>
+<h2 id="度量空间中的开覆盖"><a href="#度量空间中的开覆盖" class="headerlink" title="度量空间中的开覆盖"></a>度量空间中的开覆盖</h2><blockquote>
+<p><em>开覆盖很重要的意义是从另外一个角度刻画紧集：任意开覆盖有有限子覆盖</em></p>
+</blockquote>
+<ul>
+<li>开覆盖：设$X$是度量空间, $Λ$ 为一指标集, $A⊂X$,$∀λ∈Λ,G_λ$ 是$X$的开子集, 如果 $A⊂⋃_{λ∈Λ}G_λ$, 则称${G_λ∣λ∈Λ}$ 是$A$的开覆盖.</li>
+<li>设$X$是度量空间, $A$是$X$的紧子集,${G_λ∣λ∈Λ}$  是$A$的一个开覆盖, 则 $∃ε&gt;0$, 使得$∀x∈A$, 存在$G_x∈G_λ$ 满足$ O(x,ε)⊂G_x$ .</li>
+<li>设$X$是度量空间, $A⊂X$, $A$是紧集当且仅当$A$的任意开覆盖存在有限开覆盖.</li>
+</ul>
+<blockquote>
+<p>  度量空间上的连续映射保持紧性不变的另一种证明方法: </p>
+<p>设 $ {G_λ} $是$f(A)$的一个开覆盖. 因为$f$是连续映射,   以$ f^{−1}(G_λ)$是$A$的一个开覆盖. 由$A$的紧性知, 存在$ f^{−1}(G_i)_{i&#x3D;1}^n$覆盖$A$, 因此${G_λ} _{i&#x3D;1}^n$覆盖$f( A)$.</p>
+<p>$设 X $是紧空间,  $f:X→R  $为连续映射, 则 $f  $为一致连续映射.</p>
+<p>设$ (X,d) $是度量空间, 则$X$为紧空间的充要条件是：对$X$中的任何闭集族  ${F_{\lambda}|\lambda \in \Lambda} $,若其中任意有限个闭集$F_{\lambda}$的交集都为非空集，则 $\cap_{ \lambda \in \Lambda} F_{\lambda}$也必为非空集.  </p>
+</blockquote>
+<p>​	<img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-cdc9368fb3282cc1952071757e9b19d1_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="度量空间中的紧集"><a href="#度量空间中的紧集" class="headerlink" title="度量空间中的紧集"></a><strong>度量空间中的紧集</strong></h2><h2 id="第一章复习"><a href="#第一章复习" class="headerlink" title="第一章复习"></a><strong>第一章复习</strong></h2><ul>
+<li>概念：</li>
+<li>度量空间，拓扑空间，可分空间，完备空间，紧空间，可分集，完备集，列紧集，紧集，有界集，全有界集，开覆盖</li>
+<li>内点，闭包，领域，开集，闭集，稠密，$\epsilon$网</li>
+<li>连续，一致连续，基本列，子列，收敛列</li>
+</ul>
+<h2 id="线性赋范空间"><a href="#线性赋范空间" class="headerlink" title="线性赋范空间"></a><strong>线性赋范空间</strong></h2><h3 id="线性赋范空间的定义"><a href="#线性赋范空间的定义" class="headerlink" title="线性赋范空间的定义"></a><strong>线性赋范空间的定义</strong></h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-fe0db10452c9ee6c198bf235454c1954_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-07ef6c659278e77b608909d3663b43e3_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性赋范空间的子集和商空间"><a href="#线性赋范空间的子集和商空间" class="headerlink" title="线性赋范空间的子集和商空间"></a>线性赋范空间的子集和商空间</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-433b88f881e2cecedb575209a684147a_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-1256d38f66ba1eb5dbb6a176133cbf9a_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-0262f5c2be38547f7b0abcf6c4beb0f4_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性赋范空间和范数等价"><a href="#线性赋范空间和范数等价" class="headerlink" title="线性赋范空间和范数等价"></a>线性赋范空间和范数等价</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-5abc22fc85cbd1b8128b03919c9f2849_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-6d9f581fb4c4689238251fdde606d3cb_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-99a4b6c533add623cda6ace3532dde32_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性赋范空间的维数与紧性"><a href="#线性赋范空间的维数与紧性" class="headerlink" title="线性赋范空间的维数与紧性"></a>线性赋范空间的维数与紧性</h3><blockquote>
+<p>Resize定理的证明思路很重要</p>
+</blockquote>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f566e21eb6b918f4e7b66216fa87c86b_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="内积空间的定义"><a href="#内积空间的定义" class="headerlink" title="内积空间的定义"></a>内积空间的定义</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-4eb272b29c0b18f1ede0db55b4be1864_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-11360fe306aeb00d33ce45d28945342b_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="内积空间与线性赋范空间的关系"><a href="#内积空间与线性赋范空间的关系" class="headerlink" title="内积空间与线性赋范空间的关系"></a>内积空间与线性赋范空间的关系</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-7419c2b8fbdd954db4f14e83c7a376a5_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="内积空间的正交系"><a href="#内积空间的正交系" class="headerlink" title="内积空间的正交系"></a>内积空间的正交系</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c34cd910fc0faa5a178a2ab702521ed9_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-e5c06329ef35bffc9c2c3c55a35d0fee_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="内积空间正交系"><a href="#内积空间正交系" class="headerlink" title="内积空间正交系"></a>内积空间正交系</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-a35f46bef4ea912b95cec812f820c3e7_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="傅里叶级数与收敛性"><a href="#傅里叶级数与收敛性" class="headerlink" title="傅里叶级数与收敛性"></a>傅里叶级数与收敛性</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c84c2b1b7efbe5bda5bd88e8eefc72c2_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="线性算子"><a href="#线性算子" class="headerlink" title="线性算子"></a><strong>线性算子</strong></h2><h3 id="线性算子的定义和性质"><a href="#线性算子的定义和性质" class="headerlink" title="线性算子的定义和性质"></a><strong>线性算子的定义和性质</strong></h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-a5117709a5f9e0523dc87e5befd3cc45_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c84c2b1b7efbe5bda5bd88e8eefc72c2_1440w-16989345378491.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性算子的零空间"><a href="#线性算子的零空间" class="headerlink" title="线性算子的零空间"></a>线性算子的零空间</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-ad81e05a9b1bc6b50e97d88b63e43096_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-5da4104109990609d6158c1c03ee006f_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性有界算子空间"><a href="#线性有界算子空间" class="headerlink" title="线性有界算子空间"></a>线性有界算子空间</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f158a575b48fe32ffb80808330a1a3f0_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-8d27303e14726151def5fbe3993b6a1e_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="对偶空间与Reisz表示定理"><a href="#对偶空间与Reisz表示定理" class="headerlink" title="对偶空间与Reisz表示定理"></a>对偶空间与Reisz表示定理</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-7bb285bb94d0b3e53e1d984de747930e_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-dc477b1958f5cd89bae18867027018ad_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="算子乘法与逆算子"><a href="#算子乘法与逆算子" class="headerlink" title="算子乘法与逆算子"></a>算子乘法与逆算子</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-d3d258a15e2148da660c8eab7e4e616e_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f5fbd84d848c71b35892c26aa1a07994_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="Baire纲定理"><a href="#Baire纲定理" class="headerlink" title="Baire纲定理"></a>Baire纲定理</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-10237668b0ea457bd378504375c0321c_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-eb3560a75ddfc21ed6b64a4eeef514ef_1440w.jpeg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-00969702b8ea1c488f6c420dc0e7b927_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-be9656e1999c53787352eb9c1f4402ca_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-81bd992362374e8353c0ffe60c3cc4be_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="线性泛函的延拓定理"><a href="#线性泛函的延拓定理" class="headerlink" title="线性泛函的延拓定理"></a>线性泛函的延拓定理</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-38e00ad885c93e7a131900215b6afd51_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-06573f4a69074468a621d55426a354b0_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-ad83cbff38b44f54f7c368540d56d15a_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-351b996a7c0b96a2472396b5cc4d9a5c_1440w.jpeg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-9ece3776d4893acdbbb3adaf49275781_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="闭图像定理"><a href="#闭图像定理" class="headerlink" title="闭图像定理"></a>闭图像定理</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-f24e09ea828ed2fa468f63d97fcc73b2_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-c14079fa57bc60ea0401fe87ee353565_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="一致有界定理"><a href="#一致有界定理" class="headerlink" title="一致有界定理"></a>一致有界定理</h3><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-463f039f6cafabc712a312b393fea755_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-874bdd1873aeaf9000233c1103146287_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="泛函分析应用"><a href="#泛函分析应用" class="headerlink" title="泛函分析应用"></a>泛函分析应用</h2><p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-3038f73aede28c77e5b320f61a3addd4_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-eee4fbddbe944c9fbe8e07a895c0bea4_1440w.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>💪小知！！！</p>
+<p><img src="/2023/11/02/%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/v2-73defcfa0120371d8c6c97efcdb0b11e_b.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/" class="category-chain-item">学习资料</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%A4%A7%E4%B8%89%E4%B8%8B%E4%B8%93%E4%B8%9A%E8%AF%BE/" class="category-chain-item">大三下专业课</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/mathematics/" class="print-no-link">#mathematics</a>
+      
+        <a href="/tags/major-subject/" class="print-no-link">#major subject</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>泛函分析</div>
+      <div>http://example.com/2023/11/02/泛函分析/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zhizhia</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/10/31/%E5%AE%9E%E5%8F%98%E5%87%BD%E6%95%B0/" title="实变函数">
+                        <span class="hidden-mobile">实变函数</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
